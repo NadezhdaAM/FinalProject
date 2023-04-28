@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{
+    /*background-color:#87CEFA;*/
+    /*для корзины и заказа*/
+    font-family: 'Lobster', cursive;
+}
+img{
+    width: 200px;
+    border-radius: 15px;
+}
+a{
+    text-decoration: none;
+}

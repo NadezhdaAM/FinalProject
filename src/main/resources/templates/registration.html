@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>#Yes.Esenia Уходовая косметика</title>
+    <link th:href="@{/CSS/password.css}" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link type="img" rel="icon" href="/static/img/logo.png">
+</head>
+<body>
+<a style="padding:20px" class="label" href="/auth/login">Назад</a>
+
+<div style="margin: 30px">
+    <form method="post" th:action="@{/auth/registration}" th:object="${person}">
+        <div class="setting2">
+            <label for="login">Введите логин: </label>
+            <input type="text" th:field="*{login}"  name="username" id="login">
+            <div style="color: red" th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></div>
+            <br>
+            <label for="password">Введите пароль: </label>
+            <input  type="password"  th:field="*{password}"  name="password" id="password">
+            <div style="color: red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+            <br>
+            <input style="margin: 30px" type="submit" value="Зарегистрироваться">
+        </div>
+
+    </form>
+
+</div>
+<br>
+
+<script th:src="@{js}"></script>
+
+</body>
+</html>

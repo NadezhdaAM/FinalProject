@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{
+    /*background-color:#87CEFA;*/
+    font-family: 'Lobster', cursive;
+    background-image: linear-gradient(to right top, #22a660, #5defae, #64cdee, #c9f5df, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, rgba(9, 128, 5, 0.82), #1c6469, #71e5dd);
+}
+img{
+    width: 300px;
+    border-radius: 15px;
+}

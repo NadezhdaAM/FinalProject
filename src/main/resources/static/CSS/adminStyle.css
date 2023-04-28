@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.body{
+    /*background-color:#87CEFA;*/
+    font-family: 'Lobster', cursive;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+.grid{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-gap: 20px 20px;
+    justify-content: space-between;
+    justify-self: center;
+    height: 15px;
+}
+.item{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    margin: 20px;
+}
+img{
+    width: 200px;
+    border-radius: 15px;
+}
+
+.outBtn{
+    float: right;
+}
+
+.out{
+    background-color: #3d4083;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .4);
+    font-weight: 300;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 1px;
+    border-radius: 0px 5px 0px 5px;
+}

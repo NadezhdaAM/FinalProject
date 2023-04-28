@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.body{
+    font-family: 'Lobster', cursive;
+    color: #d4d9e3;
+}
+.table{
+}
+
+.input_style {
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 30px;
+    margin: 10px 20px;
+    position: relative;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(132,132,176,1) 58%, rgba(42,28,238,1) 100%, rgba(0,212,255,1) 100%);
+    font-weight: 300;
+    font-family: 'Lobster';
+    letter-spacing: 1px;
+    border-radius: 0px 15px 0px 15px;
+}

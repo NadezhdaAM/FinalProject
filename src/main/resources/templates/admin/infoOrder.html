@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" >
+    <title>#Yes.Esenia Уходовая косметика</title>
+    <link th:href="@{/CSS/infoOrder.css}"  type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link type="img" rel="icon" href="/static/img/logo.png">
+</head>
+<body background="/static/img/background.jpg" style="color: #5c6272">
+<div class="info" style="max-width: 600px">
+    <form th:method="POST" th:action="@{/admin/orders/{id}(id=${infoOrder.getId()})}" th:object="${infoOrder}">
+
+        <div th:each="order:${infoOrder}">
+            <p th:text="${infoOrder.getNumber()}"></p>
+            <p th:text="${infoOrder.getStatus()}"></p>
+
+            <label for="status" >Выберите статус: </label>
+            <select id="status" name="status">
+                <option th:each="state : ${T(com.example.finalproject.enumm.Status).values()}"
+                        th:value="${state}" th:text="${state}"></option>
+            </select>
+            <button type="submit">Редактировать</button>
+            <p th:text="${infoOrder.getProduct().getTitle()}"></p>
+        </div>
+
+    </form>
+    <div class="watch_product">
+        <a class="link" style="color: #4f606b; text-decoration: none;" href="/product">Просмотр заказов</a>
+    </div>
+</div>
+</body>
+</html>

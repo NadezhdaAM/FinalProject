@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>#Yes.Esenia Уходовая косметика</title>
+    <link th:href="@{/CSS/order.css}"  type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link type="img" rel="icon" href="/static/img/logo.png">
+</head>
+<body class="body" style="font-size: 25px" background="/static/img/Background.jpg">
+<form th:method="POST" th:action="@{/admin/orders/search}">
+    <h4 style="text-align: center">Поиск по наименованию</h4>
+    <div>
+        <label for="search">Поиск по четырем последний символам</label>
+        <input name="value" type="search" id="search">
+    </div>
+    <input class="input_style" type="submit" value="Поиск">
+
+    <br>
+    <div th:each="order : ${search_order}">
+        <h3>Результат поиска:</h3>
+        <p th:text="'Номер заказа: ' + ${order.getNumber()}"></p>
+    </div>
+</form>
+<!--не отображаются результаты-->
+<h4 style="text-align: center">Информация о сделанных заказах</h4>
+<table style="margin: auto; border-spacing: 70px 10px">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>Номер</th>
+        <th>Состояние</th>
+        <th>Цена</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="order:${orders}">
+        <td><a style="color: #a9b7d3; text-decoration: none" th:href="@{/admin/orders/{id}(id=${order.getId()})}" th:text="${order.getId()}"></a></td>
+        <td  th:text="${order.getNumber()}"></td>
+        <td  th:text="${order.getStatus()}"></td>
+        <td  th:text="${order.getPrice()}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>
